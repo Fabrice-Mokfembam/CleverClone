@@ -1,0 +1,13 @@
+.classroom-btn{
+    background-color: rgb(38, 38, 247);
+    color: white;
+    padding: 0px 10px;
+    border-radius: 8px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+}
+
+.computer{
+    transform: rotateZ(50deg);
+}

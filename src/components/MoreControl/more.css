@@ -1,0 +1,133 @@
+.main-morecontrol-container{
+    width: 100%;
+    height:800px;
+    background-color: #edf5ff;
+}
+
+.main-morecontrol-container-wrapper{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pic-morecontrol-container{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -20px;
+}
+.more-control-writings{
+     width: 45%;
+    height: 90%;
+}
+
+.more-control-writings-wrapper{
+    max-width: 92%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 3rem;
+    margin-top: 9rem;
+}
+
+.full-title{
+    width: 100%;
+    height: 90px;
+    font-size: 50px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    font-weight: 500;
+}
+
+.control-text-normal{
+    width: 100%;
+    height: 90px;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: -3.5rem;
+}
+
+.control-link{
+    width: 240px;
+    height: 60px;
+    font-size: 18px;
+    color: #1464ff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.div-img1-main{
+    width: 420px;
+    height: 420px;
+   position: absolute;
+   z-index: 999;
+}
+.cle-image-and-content__image-main {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.div-img1-up{
+    width: 680px;
+    height: 680px;
+    position: absolute;
+
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+@media screen and (max-width:1180px) {
+ .main-morecontrol-container-wrapper{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.pic-morecontrol-container{
+    width: 90%;
+    height: 400px;
+    margin-top: 8rem;
+}
+.more-control-writings{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.more-control-writings-wrapper{
+margin-top: 20rem;
+}
+.full-title{
+    width: 1000px;
+    height: 40px;
+    font-size: 50px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.main-morecontrol-container{
+    height: 1100px;
+}
+.control-text-normal{
+    width: inherit;
+    justify-content: center;
+    text-align: center;
+}
+.control-link{
+    width: 100%;
+    margin-top: -50px;
+    text-align: center;
+}
+}

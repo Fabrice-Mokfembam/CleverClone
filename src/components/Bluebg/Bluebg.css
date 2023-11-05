@@ -1,0 +1,25 @@
+.bluebg-container{
+  background-color: #0a1e46;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bluebg-container-wrapper{
+    width: 80%;
+    height: 94%;
+}
+.bluebg-title{
+  color: white;
+  font-size: 55px;
+}
+.bluebg-normal-text{
+    color: white;
+}
+
+.blue-svg{
+    margin-top: -60px;
+    margin-left:130px ;
+}

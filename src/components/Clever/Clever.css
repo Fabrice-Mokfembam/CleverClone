@@ -1,0 +1,57 @@
+.main-clever-container{
+    width: 100%;
+    height: 420px;
+    background-color: #edf5ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main-clever-container-raaper{
+    width: 90%;
+    height: inherit;
+    display: flex;
+    margin-right: -120px;
+    align-items: center;
+}
+
+.clever-writings h2{
+    font-size: 54px;
+}
+
+.clever-writings .ftext{
+    font-size: 18px;
+    margin-top: -20px;
+}
+
+@media screen and (max-width:1136px) {
+    .cleversvg{
+        width: 500px;
+        height: 500px;
+    }
+}
+@media screen and (max-width:980px) {
+    .cleversvg{
+        width: 500px;
+        height: 250px;
+        margin-left: -80px;
+        margin-top: 5rem;
+    }
+    .main-clever-container-raaper{
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+        margin-right: -80px;
+    }
+    .animated-svg{
+        width: 100%;
+
+    }
+    .animated-svg-wrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

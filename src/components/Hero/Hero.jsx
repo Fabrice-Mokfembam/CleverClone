@@ -7,6 +7,7 @@ import Starlike from '../../assets/images/starlike.jpg'
 
 function Hero() {
   return (
+    <>
     <div className='main-hero-container'>
       <div className="main-hero-wrapper">
         <div className="hero-titles-and-button">
@@ -77,7 +78,11 @@ function Hero() {
            </div>
         </div>
       </div>
-    </div>
+      </div>
+      <div className='arch-background'>
+
+      </div>
+      </>
   )
 }
 
