@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState,useRef} from 'react'
 import './Header.css'
 import { NavLink } from 'react-router-dom';
 import { FaChevronDown } from 'react-icons/fa';
@@ -11,7 +11,17 @@ function Header() {
     const [ishoveredApplication, setIshoveredApplication] = useState(false);
     const [ishoveredCompany, setIshoveredComapany] = useState(false);
     const [ishoveredHelp, setIshoveredHelp] = useState(false);
-    
+
+   
+    const navRef = useRef();    
+    const hamRef = useRef();    
+    const XRef = useRef();    
+
+    function toggleVisible() {
+        hamRef.current.classList.toggle('hidden')
+        XRef.current.classList.toggle('visible')
+        navRef.current.classList.toggle('visible')
+    }
 
     function display() {
         setIshoveredSchool(true);
@@ -48,20 +58,23 @@ function Header() {
               </div>  
               <div className="bottom-head">
                         <div className="bottom-head-wrapper">
-                            <div className='hamburger'>
-                                 <FaBars className='hamIcon'/>
+                            <div className='hamburger' ref={hamRef} onClick={toggleVisible} >
+                                <FaBars className='hamIcon' />
                                 </div>
-                            <div className="X-rem">
+                            <div className="X-rem" ref={XRef} onClick={toggleVisible}>
                                 <FaTimes className=' timesIcon'/>
                                 </div>
                             <div className="text-clever">
                           <h1 className='h1'>Clever</h1>
                       </div>
-                      <div className="onmouse-hovers">
+                      <div className="onmouse-hovers" ref={navRef}>
                           <div className="hover-item one" onMouseOver={display} onMouseOut={displaynot}>
                               <div className="item">
                                   <h3>Schools</h3>
-                              </div>
+                                    </div>
+                                    <div className="arrow">
+                                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="14.25" stroke="#1464FF" stroke-width="1.5"></circle><path d="M20.5303 15.5303C20.8232 15.2374 20.8232 14.7626 20.5303 14.4697L15.7574 9.6967C15.4645 9.40381 14.9896 9.40381 14.6967 9.6967C14.4038 9.98959 14.4038 10.4645 14.6967 10.7574L18.9393 15L14.6967 19.2426C14.4038 19.5355 14.4038 20.0104 14.6967 20.3033C14.9896 20.5962 15.4645 20.5962 15.7574 20.3033L20.5303 15.5303ZM9 15.75L20 15.75L20 14.25L9 14.25L9 15.75Z" fill="#1464FF"></path></svg>
+                                </div>
                               <div className="item-icon">
                                         <FaChevronDown className={'arroeDown-icon ' + (ishoveredSchool ? 'arroeDown-icon-test' : '')} />
                               </div>
@@ -70,6 +83,10 @@ function Header() {
                                 <div className="item">
                                     <h3> Application Partners</h3>
                                 </div>
+                                    
+                                <div className="arrow">
+                                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="14.25" stroke="#1464FF" stroke-width="1.5"></circle><path d="M20.5303 15.5303C20.8232 15.2374 20.8232 14.7626 20.5303 14.4697L15.7574 9.6967C15.4645 9.40381 14.9896 9.40381 14.6967 9.6967C14.4038 9.98959 14.4038 10.4645 14.6967 10.7574L18.9393 15L14.6967 19.2426C14.4038 19.5355 14.4038 20.0104 14.6967 20.3033C14.9896 20.5962 15.4645 20.5962 15.7574 20.3033L20.5303 15.5303ZM9 15.75L20 15.75L20 14.25L9 14.25L9 15.75Z" fill="#1464FF"></path></svg>
+                                </div>
                                 <div className="item-icon">
                                     <FaChevronDown className={'arroeDown-icon ' + (ishoveredApplication ? 'arroeDown-icon-test' : '')} />
                                 </div>
@@ -77,12 +94,18 @@ function Header() {
                           <div className="hover-item three">
                               <div className="item">
                                   <h3>Apps On Clever</h3>
-                              </div>
+                                    </div>
+                                    <div className="arrow">
+                                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="14.25" stroke="#1464FF" stroke-width="1.5"></circle><path d="M20.5303 15.5303C20.8232 15.2374 20.8232 14.7626 20.5303 14.4697L15.7574 9.6967C15.4645 9.40381 14.9896 9.40381 14.6967 9.6967C14.4038 9.98959 14.4038 10.4645 14.6967 10.7574L18.9393 15L14.6967 19.2426C14.4038 19.5355 14.4038 20.0104 14.6967 20.3033C14.9896 20.5962 15.4645 20.5962 15.7574 20.3033L20.5303 15.5303ZM9 15.75L20 15.75L20 14.25L9 14.25L9 15.75Z" fill="#1464FF"></path></svg>
+                                </div>
                           </div>
                           <div className="hover-item four" onMouseOver={displayCom} onMouseOut={displaynotCom}>
                               <div className="item">
                                  <h3>Our company</h3> 
-                              </div>
+                                    </div>
+                                    <div className="arrow">
+                                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="14.25" stroke="#1464FF" stroke-width="1.5"></circle><path d="M20.5303 15.5303C20.8232 15.2374 20.8232 14.7626 20.5303 14.4697L15.7574 9.6967C15.4645 9.40381 14.9896 9.40381 14.6967 9.6967C14.4038 9.98959 14.4038 10.4645 14.6967 10.7574L18.9393 15L14.6967 19.2426C14.4038 19.5355 14.4038 20.0104 14.6967 20.3033C14.9896 20.5962 15.4645 20.5962 15.7574 20.3033L20.5303 15.5303ZM9 15.75L20 15.75L20 14.25L9 14.25L9 15.75Z" fill="#1464FF"></path></svg>
+                                </div>
                               <div className="item-icon">
                                         <FaChevronDown className={'arroeDown-icon ' + (ishoveredCompany ? 'arroeDown-icon-test' : '')} />
                               </div>
@@ -90,7 +113,10 @@ function Header() {
                           <div className="hover-item five" onMouseOver={displayHelp} onMouseOut={displaynotHelp}>
                               <div className="item">
                                  <h3> Help</h3>
-                              </div>
+                                    </div>
+                                    <div className="arrow">
+                                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="14.25" stroke="#1464FF" stroke-width="1.5"></circle><path d="M20.5303 15.5303C20.8232 15.2374 20.8232 14.7626 20.5303 14.4697L15.7574 9.6967C15.4645 9.40381 14.9896 9.40381 14.6967 9.6967C14.4038 9.98959 14.4038 10.4645 14.6967 10.7574L18.9393 15L14.6967 19.2426C14.4038 19.5355 14.4038 20.0104 14.6967 20.3033C14.9896 20.5962 15.4645 20.5962 15.7574 20.3033L20.5303 15.5303ZM9 15.75L20 15.75L20 14.25L9 14.25L9 15.75Z" fill="#1464FF"></path></svg>
+                                </div>
                               <div className="item-icon">
                                       <FaChevronDown className={'arroeDown-icon ' + (ishoveredHelp ? 'arroeDown-icon-test' : '')}/>
                               </div>
