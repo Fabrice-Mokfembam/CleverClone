@@ -7,9 +7,9 @@ function Classroom() {
   return (
       <>
       
- <div className="main-morecontrol-container ">
-    <div className="main-morecontrol-container-wrapper built-container-wrapper">
-      <div className="more-control-writings built-writings">
+ <div className="main-morecontrol-container classroom-container">
+    <div className="main-morecontrol-container-wrapper built-container-wrapper classroom-wrapper">
+      <div className="more-control-writings built-writings classroom-writings" >
           <div className="more-control-writings-wrapper built-writings-wrapper">
             <div className="full-title built-title">New! Classroom of the Future Report 2023</div>
             <div className="control-text-normal built-normal-text">
@@ -20,7 +20,7 @@ function Classroom() {
            </svg></div>
           </div>
         </div>          
-      <div className="pic-morecontrol-container built-image-container">              
+      <div className="pic-morecontrol-container built-image-container classroom-image">              
           <div className="div-img1-main">
              <img
               src={img1}

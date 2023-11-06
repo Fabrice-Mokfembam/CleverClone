@@ -123,7 +123,8 @@
 }
 
 .btn-header{
-    padding: .8rem 4rem;
+    width: 400px;
+    padding: .8rem 1rem;
     border: none;
     background-color: #1464ff;
     color: #fff;
@@ -132,14 +133,26 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: all .4s ease;
+    margin-right: -40px;
+}
+.text{
+    display: flex;
+    gap: .6px;
+}
+.btn-header:hover{
+    cursor: pointer;
+    background-color: #1351ce;
 }
 .btn-header .text{
-    margin: 0px 12px;
+  font-size: 18px;
 }
 .btn-icon-header{
     margin-left: -10px;
 }
-
+.item-icon-login{
+    
+}
 .arroeDown-icon{
     font-size: 12px;
     transition: all .8s ease;
@@ -165,8 +178,20 @@
     margin-top: 2px;
     box-shadow: 0px 2px 6px rgb(126, 208, 240);
     z-index: 999;
+    animation:  grow 2s ease forwards ;
+    transition: all 2s ease;
 }
 
+@keyframes grow {
+    from{
+        width: 100%;
+        height: 0px;
+    }
+    to{
+        width: 100%;
+        height: 500px;
+    }
+}
 .school-div-wrapper{
     width: 100%;
     height: 100%;
@@ -566,7 +591,7 @@
      animation: smooth .8s ease-in forwards;
     
    }
-
+   
    @keyframes smooth {
       from{
         transform: translateX(-100%);

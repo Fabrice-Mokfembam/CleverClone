@@ -131,7 +131,7 @@ function Header() {
                                       <path d="M3 15.8018C4.08346 12.9928 6.80901 11 10 11C13.4495 11 16.3551 13.3288 17.2304 16.5" stroke="#FFE478"></path>
                                 </svg>
                               </div>
-                              <div className="text">Login <span className='login-header'>as a Student</span></div>
+                                    <div className="text">Login <span className='login-header'> { " "}as a Student</span></div>
                               <div className="item-icon item-icon-login">
                                   <FaChevronDown className='arroeDown-icon'/>
                               </div>

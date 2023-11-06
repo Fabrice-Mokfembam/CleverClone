@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRef,useEffect } from 'react'
 import './Hero.css'
 
 import vetor1 from '../../assets/images/vecto1.svg'
@@ -6,14 +7,33 @@ import vetor2 from '../../assets/images/vector2.svg'
 import Starlike from '../../assets/images/starlike.jpg'
 
 function Hero() {
+    const cleverRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        } else {
+          entry.target.classList.remove('animate');
+        }
+      });
+    });
+
+    observer.observe(cleverRef.current);
+
+    return () => {
+      observer.unobserve(cleverRef.current);
+    };
+  }, []);
   return (
     <>
     <div className='main-hero-container'>
       <div className="main-hero-wrapper">
         <div className="hero-titles-and-button">
           <div className="hero-title-container">
-            <h1 className='hero-title'>
-              The platform <span>powering</span> digital learning for schools.
+            <h1 className='hero-title' ref={cleverRef}>
+              The platform <span className='orange-botter'>powering</span> digital learning for schools.
             </h1>
           </div>
           <div className="hero-text-container">
@@ -26,7 +46,7 @@ function Hero() {
               <button className="blue-hero-btn">
                 Log in as a student
                 <div className="icn-btn">
-
+                       <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="14.25" stroke="#FFF" stroke-width="1.5"></circle><path d="M20.5303 15.5303C20.8232 15.2374 20.8232 14.7626 20.5303 14.4697L15.7574 9.6967C15.4645 9.40381 14.9896 9.40381 14.6967 9.6967C14.4038 9.98959 14.4038 10.4645 14.6967 10.7574L18.9393 15L14.6967 19.2426C14.4038 19.5355 14.4038 20.0104 14.6967 20.3033C14.9896 20.5962 15.4645 20.5962 15.7574 20.3033L20.5303 15.5303ZM9 15.75L20 15.75L20 14.25L9 14.25L9 15.75Z" fill="#FFF"></path></svg>
                 </div>
                 </button>
             </div>
@@ -35,7 +55,7 @@ function Hero() {
                 <button className='bnt'>
                   For schools
                 <div className="icn-btn">
-
+                      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="14.25" stroke="#1464FF" stroke-width="1.5"></circle><path d="M20.5303 15.5303C20.8232 15.2374 20.8232 14.7626 20.5303 14.4697L15.7574 9.6967C15.4645 9.40381 14.9896 9.40381 14.6967 9.6967C14.4038 9.98959 14.4038 10.4645 14.6967 10.7574L18.9393 15L14.6967 19.2426C14.4038 19.5355 14.4038 20.0104 14.6967 20.3033C14.9896 20.5962 15.4645 20.5962 15.7574 20.3033L20.5303 15.5303ZM9 15.75L20 15.75L20 14.25L9 14.25L9 15.75Z" fill="#1464FF"></path></svg>
                 </div>
                 </button>
                 
@@ -44,7 +64,7 @@ function Hero() {
                 <button className='bnt'>
                   For application partners
                 <div className="icn-btn">
-
+                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="14.25" stroke="#1464FF" stroke-width="1.5"></circle><path d="M20.5303 15.5303C20.8232 15.2374 20.8232 14.7626 20.5303 14.4697L15.7574 9.6967C15.4645 9.40381 14.9896 9.40381 14.6967 9.6967C14.4038 9.98959 14.4038 10.4645 14.6967 10.7574L18.9393 15L14.6967 19.2426C14.4038 19.5355 14.4038 20.0104 14.6967 20.3033C14.9896 20.5962 15.4645 20.5962 15.7574 20.3033L20.5303 15.5303ZM9 15.75L20 15.75L20 14.25L9 14.25L9 15.75Z" fill="#1464FF"></path></svg>
                 </div>
                 </button>
                 

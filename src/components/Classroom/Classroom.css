@@ -11,3 +11,17 @@
 .computer{
     transform: rotateZ(50deg);
 }
+.classroom-container{
+    display: flex;
+    justify-content: center;
+}
+.classroom-wrapper{
+    width: 85%;
+    height: 90%;
+}
+.classroom-image{
+
+}
+.classroom-writings{
+    width: 60%;
+}
